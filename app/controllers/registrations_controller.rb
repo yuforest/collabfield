@@ -1,4 +1,4 @@
-class RegistrationsController < Device:RegistrationsController
+class RegistrationsController < Devise::RegistrationsController
 
   private
 
@@ -6,7 +6,7 @@ class RegistrationsController < Device:RegistrationsController
     params.require(:user).permit( :name,
                                   :email,
                                   :password,
-                                  :password_comfirmation)
+                                  :password_confirmation)
   end
 
 
@@ -14,7 +14,7 @@ class RegistrationsController < Device:RegistrationsController
     params.require(:user).permit( :name,
                                   :email,
                                   :password,
-                                  :password_comfirmation,
+                                  :password_confirmation,
                                   :current_password)
   end
 end
